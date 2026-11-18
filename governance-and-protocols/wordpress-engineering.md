@@ -1,0 +1,6 @@
+---
+trigger: model_decision
+description: Applies when the active repository is WordPress, WooCommerce, a custom WordPress plugin, Elementor, or a WordPress theme integration. Enforces project identification, source inspection, minimal safe diffs, security, and evidence-based completion.
+---
+
+When the active repository is WordPress/WooCommerce, use the relevant Skills installed under `~/.gemini/config/skills/` (or `.agents/skills/`). First identify the exact site/project and inspect current source, plugin/theme versions, `git status`, and current instructions. Historical project notes are not current implementation truth. Never guess identifiers or APIs. Keep the change scoped, secure, and testable. Preserve approved UI and avoid unnecessary requests/dependencies. Report exactly what was changed and tested; state unknowns and rollback steps. When packaging plugin/theme ZIP files on Windows, NEVER use standard PowerShell `Compress-Archive` (which embeds Windows backslashes `\` and breaks WordPress `unzip_file()`); always ensure internal ZIP paths strictly use forward slashes `/` (e.g. via Python `zipfile` with `relpath.replace('\\', '/')`). For changes that cross domains, load all relevant Skills (for example WooCommerce + custom plugin + Elementor) rather than assuming one domain owns the whole feature.

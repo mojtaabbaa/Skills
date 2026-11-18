@@ -1,0 +1,13 @@
+/**
+ * Defensive CSS for Elementor Flexbox Containers + WoodMart Sticky Sidebar
+ * Prevents container shrinkage to min-content on filtered catalogs.
+ */
+.woodmart-shop-sidebar-column,
+.woodmart-shop-sidebar-column .elementor-widget-wrap,
+.woodmart-shop-sidebar-column .elementor-sticky--active,
+.woodmart-shop-sidebar-column .elementor-sticky__spacer {
+    min-width: 260px !important;
+    flex-shrink: 0 !important;
+    flex-basis: 260px !important;
+    box-sizing: border-box;
+}

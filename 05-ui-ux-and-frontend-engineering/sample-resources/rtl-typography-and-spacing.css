@@ -1,0 +1,38 @@
+/**
+ * Bi-directional (RTL/LTR) Typography & Layout Harmonization
+ */
+
+/* Root Typography Variables */
+:root {
+    --font-primary-fa: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-secondary-en: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+[dir="rtl"] {
+    font-family: var(--font-primary-fa);
+    text-align: right;
+}
+
+/* English secondary segments inside RTL containers */
+[dir="rtl"] .en-text,
+[dir="rtl"] .en-title,
+[dir="rtl"] .brand-latin-name {
+    direction: ltr;
+    display: inline-block;
+    text-align: left;
+    font-family: var(--font-secondary-en);
+    unicode-bidi: isolate;
+}
+
+/* Accessible minimum touch targets */
+button,
+a,
+input[type="checkbox"] + label,
+input[type="radio"] + label,
+.wd-swatch {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

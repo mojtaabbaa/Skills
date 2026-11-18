@@ -1,0 +1,394 @@
+{
+  "id": "6dba1a0",
+  "elType": "container",
+  "settings": {
+    "ep_global_badge_text": "New",
+    "ep_global_badge_clip_path_value": "polygon(0% 0%, 100% 1%, 88% 49%, 100% 100%, 0% 100%)",
+    "ep_global_badge_lottie_json_path": "https://armanivision.com/wp-content/plugins/bdthemes-element-pack1/assets/others/rocket-space.json",
+    "eael_parallax_layers_list": [],
+    "eael_ext_content_protection_password_placeholder": "Enter Password",
+    "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+    "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+    "eael_cl_logics": [
+      {
+        "_id": "d336f7e",
+        "dynamic_field_custom_separator": "|"
+      }
+    ],
+    "jet_parallax_layout_list": [],
+    "bdt_shape_builder_list": [],
+    "scroll_y": -80,
+    "content_width": "full",
+    "display_condition_list": [
+      {
+        "display_condition_login_status": "subscriber",
+        "_id": "8c6ef9c"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "id": "ad06202",
+      "elType": "widget",
+      "settings": {
+        "title": "سوالات متداول",
+        "eael_vto_writing_gradient_color_repeater": [
+          {
+            "eael_vto_writing_gradient_color": "#7C62FF",
+            "eael_vto_writing_gradient_color_location": {
+              "unit": "%",
+              "size": 50
+            },
+            "_id": "f17aca5"
+          },
+          {
+            "eael_vto_writing_gradient_color": "#FF6464",
+            "eael_vto_writing_gradient_color_location": {
+              "unit": "%",
+              "size": 90
+            },
+            "_id": "859855a"
+          }
+        ],
+        "eael_tooltip_section_content": "I am a tooltip",
+        "eael_ext_content_protection_password_placeholder": "Enter Password",
+        "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+        "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+        "eael_cl_logics": [
+          {
+            "_id": "86b84c6",
+            "dynamic_field_custom_separator": "|"
+          }
+        ],
+        "ep_global_badge_text": "New",
+        "ep_global_badge_clip_path_value": "polygon(0% 0%, 100% 1%, 88% 49%, 100% 100%, 0% 100%)",
+        "ep_global_badge_lottie_json_path": "https://armanivision.com/wp-content/plugins/bdthemes-element-pack1/assets/others/rocket-space.json",
+        "bdt_shape_builder_list": [],
+        "scroll_y": -80,
+        "display_condition_list": [
+          {
+            "display_condition_login_status": "subscriber",
+            "_id": "99b5d62"
+          }
+        ]
+      },
+      "elements": [],
+      "widgetType": "heading"
+    },
+    {
+      "id": "496d4d2",
+      "elType": "widget",
+      "widgetType": "nested-accordion",
+      "settings": {
+        "items": [
+          {
+            "item_title": "برای عدسی تدریجی چه فریمی انتخاب کنم؟",
+            "_id": "92f78cb"
+          },
+          {
+            "item_title": "اگر فقط بتوانم یک فریم بخرم، کدام را انتخاب کنم؟",
+            "_id": "d399d36"
+          },
+          {
+            "item_title": "آیا فریم سبک برای استفاده طولانی بهتر است؟",
+            "_id": "9a2311c"
+          }
+        ],
+        "accordion_item_title_space_between": {
+          "unit": "px",
+          "size": 5,
+          "sizes": []
+        },
+        "accordion_background_normal_background": "classic",
+        "accordion_background_normal_color": "#C0202461",
+        "accordion_border_radius": {
+          "unit": "px",
+          "top": "12",
+          "right": "12",
+          "bottom": "12",
+          "left": "12",
+          "isLinked": true
+        },
+        "normal_title_color": "#F0E8DE",
+        "hover_title_color": "#F0E8DE",
+        "active_title_color": "#F0E8DE",
+        "eael_tooltip_section_content": "I am a tooltip",
+        "eael_ext_content_protection_password_placeholder": "Enter Password",
+        "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+        "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+        "eael_cl_logics": [
+          {
+            "_id": "b920278",
+            "dynamic_field_custom_separator": "|"
+          }
+        ],
+        "ep_global_badge_text": "New",
+        "ep_global_badge_clip_path_value": "polygon(0% 0%, 100% 1%, 88% 49%, 100% 100%, 0% 100%)",
+        "ep_global_badge_lottie_json_path": "https://armanivision.com/wp-content/plugins/bdthemes-element-pack1/assets/others/rocket-space.json",
+        "bdt_shape_builder_list": [],
+        "scroll_y": -80,
+        "__globals__": {
+          "normal_title_color": "globals/colors?id=primary",
+          "hover_title_color": "globals/colors?id=primary",
+          "active_title_color": "globals/colors?id=primary",
+          "accordion_background_normal_color": ""
+        },
+        "display_condition_list": [
+          {
+            "display_condition_login_status": "subscriber",
+            "_id": "e61505c"
+          }
+        ]
+      },
+      "elements": [
+        {
+          "id": "19934c2",
+          "elType": "container",
+          "settings": {
+            "_title": "item #1",
+            "content_width": "full",
+            "ep_global_badge_text": "New",
+            "ep_global_badge_clip_path_value": "polygon(0% 0%, 100% 1%, 88% 49%, 100% 100%, 0% 100%)",
+            "ep_global_badge_lottie_json_path": "https://armanivision.com/wp-content/plugins/bdthemes-element-pack1/assets/others/rocket-space.json",
+            "eael_parallax_layers_list": [],
+            "eael_ext_content_protection_password_placeholder": "Enter Password",
+            "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+            "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+            "eael_cl_logics": [
+              {
+                "_id": "7417293",
+                "dynamic_field_custom_separator": "|"
+              }
+            ],
+            "jet_parallax_layout_list": [],
+            "bdt_shape_builder_list": [],
+            "scroll_y": -80,
+            "display_condition_list": [
+              {
+                "display_condition_login_status": "subscriber",
+                "_id": "714cdad"
+              }
+            ]
+          },
+          "elements": [
+            {
+              "id": "2b55434",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"text-align: justify;\">فریمی انتخاب کنید که ارتفاع کافی برای عدسی تدریجی داشته باشد. اندازه دقیق به نوع عدسی بستگی دارد؛ بنابراین، بهتر است پیش از خرید، فریم را با اپتومتریست بررسی کنید.</p>",
+                "eael_vto_writing_gradient_color_repeater": [
+                  {
+                    "eael_vto_writing_gradient_color": "#7C62FF",
+                    "eael_vto_writing_gradient_color_location": {
+                      "unit": "%",
+                      "size": 50
+                    },
+                    "_id": "e194c7e"
+                  },
+                  {
+                    "eael_vto_writing_gradient_color": "#FF6464",
+                    "eael_vto_writing_gradient_color_location": {
+                      "unit": "%",
+                      "size": 90
+                    },
+                    "_id": "8d53299"
+                  }
+                ],
+                "eael_tooltip_section_content": "I am a tooltip",
+                "eael_ext_content_protection_password_placeholder": "Enter Password",
+                "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+                "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+                "eael_cl_logics": [
+                  {
+                    "_id": "5971421",
+                    "dynamic_field_custom_separator": "|"
+                  }
+                ],
+                "ep_global_badge_text": "New",
+                "ep_global_badge_clip_path_value": "polygon(0% 0%, 100% 1%, 88% 49%, 100% 100%, 0% 100%)",
+                "ep_global_badge_lottie_json_path": "https://armanivision.com/wp-content/plugins/bdthemes-element-pack1/assets/others/rocket-space.json",
+                "bdt_shape_builder_list": [],
+                "scroll_y": -80,
+                "display_condition_list": [
+                  {
+                    "display_condition_login_status": "subscriber",
+                    "_id": "dabb4f5"
+                  }
+                ]
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": true,
+          "isLocked": true
+        },
+        {
+          "id": "c09588a",
+          "elType": "container",
+          "settings": {
+            "_title": "item #2",
+            "content_width": "full",
+            "ep_global_badge_text": "New",
+            "ep_global_badge_clip_path_value": "polygon(0% 0%, 100% 1%, 88% 49%, 100% 100%, 0% 100%)",
+            "ep_global_badge_lottie_json_path": "https://armanivision.com/wp-content/plugins/bdthemes-element-pack1/assets/others/rocket-space.json",
+            "eael_parallax_layers_list": [],
+            "eael_ext_content_protection_password_placeholder": "Enter Password",
+            "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+            "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+            "eael_cl_logics": [
+              {
+                "_id": "395debd",
+                "dynamic_field_custom_separator": "|"
+              }
+            ],
+            "jet_parallax_layout_list": [],
+            "bdt_shape_builder_list": [],
+            "scroll_y": -80,
+            "display_condition_list": [
+              {
+                "display_condition_login_status": "subscriber",
+                "_id": "d686664"
+              }
+            ]
+          },
+          "elements": [
+            {
+              "id": "767d651",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"text-align: justify;\">فریمی با رنگ خنثی، اندازه مناسب و طراحی ساده انتخاب کنید که با بیشتر لباس ها و موقعیت ها هماهنگ باشد. این مدل ها معمولا برای استفاده روزمره و محیط کار هم مناسب اند.</p>",
+                "eael_vto_writing_gradient_color_repeater": [
+                  {
+                    "eael_vto_writing_gradient_color": "#7C62FF",
+                    "eael_vto_writing_gradient_color_location": {
+                      "unit": "%",
+                      "size": 50
+                    },
+                    "_id": "e194c7e"
+                  },
+                  {
+                    "eael_vto_writing_gradient_color": "#FF6464",
+                    "eael_vto_writing_gradient_color_location": {
+                      "unit": "%",
+                      "size": 90
+                    },
+                    "_id": "8d53299"
+                  }
+                ],
+                "eael_tooltip_section_content": "I am a tooltip",
+                "eael_ext_content_protection_password_placeholder": "Enter Password",
+                "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+                "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+                "eael_cl_logics": [
+                  {
+                    "_id": "5971421",
+                    "dynamic_field_custom_separator": "|"
+                  }
+                ],
+                "ep_global_badge_text": "New",
+                "ep_global_badge_clip_path_value": "polygon(0% 0%, 100% 1%, 88% 49%, 100% 100%, 0% 100%)",
+                "ep_global_badge_lottie_json_path": "https://armanivision.com/wp-content/plugins/bdthemes-element-pack1/assets/others/rocket-space.json",
+                "bdt_shape_builder_list": [],
+                "scroll_y": -80,
+                "display_condition_list": [
+                  {
+                    "display_condition_login_status": "subscriber",
+                    "_id": "e63a20c"
+                  }
+                ]
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": true,
+          "isLocked": true
+        },
+        {
+          "id": "6e6a7f5",
+          "elType": "container",
+          "settings": {
+            "_title": "item #3",
+            "content_width": "full",
+            "ep_global_badge_text": "New",
+            "ep_global_badge_clip_path_value": "polygon(0% 0%, 100% 1%, 88% 49%, 100% 100%, 0% 100%)",
+            "ep_global_badge_lottie_json_path": "https://armanivision.com/wp-content/plugins/bdthemes-element-pack1/assets/others/rocket-space.json",
+            "eael_parallax_layers_list": [],
+            "eael_ext_content_protection_password_placeholder": "Enter Password",
+            "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+            "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+            "eael_cl_logics": [
+              {
+                "_id": "0a2308d",
+                "dynamic_field_custom_separator": "|"
+              }
+            ],
+            "jet_parallax_layout_list": [],
+            "bdt_shape_builder_list": [],
+            "scroll_y": -80,
+            "display_condition_list": [
+              {
+                "display_condition_login_status": "subscriber",
+                "_id": "6780c12"
+              }
+            ]
+          },
+          "elements": [
+            {
+              "id": "6da48ef",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"text-align: justify;\">بله، فریم سبک معمولا فشار کمتری روی بینی و پشت گوش می گذارد و برای استفاده چندساعته راحت تر است. فقط به یاد داشته باشید وزن عینک فقط وزن فریم نیست؛ عدسی هم وزن دارد و فریم کوچک تر، چون عدسی کمتری لازم دارد، سبک تر می شود. سبک ترین مدل ها، مثل بدون فریم، برای نمره بالا مناسب نیستند.</p>",
+                "eael_vto_writing_gradient_color_repeater": [
+                  {
+                    "eael_vto_writing_gradient_color": "#7C62FF",
+                    "eael_vto_writing_gradient_color_location": {
+                      "unit": "%",
+                      "size": 50
+                    },
+                    "_id": "e194c7e"
+                  },
+                  {
+                    "eael_vto_writing_gradient_color": "#FF6464",
+                    "eael_vto_writing_gradient_color_location": {
+                      "unit": "%",
+                      "size": 90
+                    },
+                    "_id": "8d53299"
+                  }
+                ],
+                "eael_tooltip_section_content": "I am a tooltip",
+                "eael_ext_content_protection_password_placeholder": "Enter Password",
+                "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+                "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+                "eael_cl_logics": [
+                  {
+                    "_id": "5971421",
+                    "dynamic_field_custom_separator": "|"
+                  }
+                ],
+                "ep_global_badge_text": "New",
+                "ep_global_badge_clip_path_value": "polygon(0% 0%, 100% 1%, 88% 49%, 100% 100%, 0% 100%)",
+                "ep_global_badge_lottie_json_path": "https://armanivision.com/wp-content/plugins/bdthemes-element-pack1/assets/others/rocket-space.json",
+                "bdt_shape_builder_list": [],
+                "scroll_y": -80,
+                "display_condition_list": [
+                  {
+                    "display_condition_login_status": "subscriber",
+                    "_id": "764a53b"
+                  }
+                ]
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": true,
+          "isLocked": true
+        }
+      ]
+    }
+  ],
+  "isInner": true
+}

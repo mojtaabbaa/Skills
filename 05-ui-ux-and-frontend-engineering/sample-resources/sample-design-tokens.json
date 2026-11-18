@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "name": "Production Design Tokens",
+  "tokens": {
+    "color": {
+      "brand": {
+        "primary": { "value": "#1a56db", "type": "color" },
+        "secondary": { "value": "#7e3af2", "type": "color" },
+        "accent": { "value": "#e02424", "type": "color" }
+      },
+      "neutral": {
+        "surface": { "value": "#ffffff", "type": "color" },
+        "background": { "value": "#f9fafb", "type": "color" },
+        "text-primary": { "value": "#111827", "type": "color" },
+        "text-muted": { "value": "#6b7280", "type": "color" }
+      }
+    },
+    "spacing": {
+      "xs": { "value": "4px", "type": "spacing" },
+      "sm": { "value": "8px", "type": "spacing" },
+      "md": { "value": "16px", "type": "spacing" },
+      "lg": { "value": "24px", "type": "spacing" },
+      "xl": { "value": "32px", "type": "spacing" }
+    },
+    "typography": {
+      "fontFamily": {
+        "sans-fa": { "value": "Vazirmatn, sans-serif" },
+        "sans-en": { "value": "Inter, sans-serif" }
+      },
+      "fontSize": {
+        "sm": { "value": "14px" },
+        "base": { "value": "16px" },
+        "lg": { "value": "18px" },
+        "xl": { "value": "20px" }
+      }
+    }
+  }
+}
