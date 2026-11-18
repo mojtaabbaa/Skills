@@ -8,6 +8,21 @@
 
 ---
 
+## [2026-11-18] | Upgrade `elementor-architecture` (Non-Atomic Flexbox/Grid Traps, 18 Luxury Blog Patterns, Kit Safety, Render Debug & Compiler v2)
+- **Agent / Role:** Elementor & Design Systems Agent
+- **Domains:** `[04-elementor]`
+- **Action:** `PULL-RECOMMENDED`
+- **Changed Paths:**
+  - `04-elementor-and-elementor-pro/skills/elementor-architecture/SKILL.md`
+  - `04-elementor-and-elementor-pro/skills/elementor-architecture/extensions/01-json-ast-and-controls-schema.md`
+  - `04-elementor-and-elementor-pro/skills/elementor-architecture/extensions/03-editorial-patterns-and-mcp-publish.md`
+  - `04-elementor-and-elementor-pro/skills/elementor-architecture/extensions/06-visual-qa-kit-safety-and-render-debug.md`
+  - `04-elementor-and-elementor-pro/skills/elementor-architecture/scripts/article_to_elementor.py`
+- **Summary (1-2 lines):** Closed 10 Non-Atomic Elementor blog-design & publishing gaps: 6 silent Flexbox/Grid CSS-generator traps, Zero-Cascade & Kit 20px rules, 18 native zero-HTML editorial components (RTL timeline, pill badges, E-E-A-T expert card, decomposed cards), Single-Post Template boundary, Navigator `_title`, Global Kit corruption safety & revision recovery, `.e-con-inner` DOM diagnostics, 4-bucket render triage, and `article_to_elementor.py` v2 with built-in AST `validate()`.
+- **Full Repo Check Needed?** `NO`
+
+---
+
 ## [2026-11-18] | Add `CHANGELOG-AGENTS.md` & Team GitHub Sync Protocol
 - **Agent / Role:** Skills Architect / SEO & Platform Agent
 - **Domains:** `[governance]`

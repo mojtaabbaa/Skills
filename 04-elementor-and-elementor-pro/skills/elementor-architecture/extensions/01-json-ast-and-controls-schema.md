@@ -20,16 +20,44 @@ Every node inside `_elementor_data` follows this JSON schema:
 ```
 *(Omit `widgetType` on containers; use `id` of 7 unique lowercase hex/alphanumeric characters.)*
 
-### Binding Serialization Laws
+### Binding Serialization Laws (Non-Atomic Classic & Flexbox/Grid)
 1. **Tab Flattening Law:** Elementor does **NOT** nest controls under `content`, `style`, or `advanced` keys in `_elementor_data`. All controls across all three tabs flatten directly into `settings`.
 2. **CRITICAL Container-vs-Widget Prefix Law (`common-base.php`):**
-   - **On Containers (`elType: "container"`):** Bare keys (NO underscore): `margin`, `padding`, `z_index`, `css_classes`, `_element_id`, `animation`.
-   - **On Widgets (`elType: "widget"`):** Underscore-prefixed keys: `_margin`, `_padding`, `_z_index`, `_css_classes`, `_element_id`, `_animation`.
-   - *Violating this causes Elementor's CSS generator to silently drop the styling!*
-3. **Responsive Suffix Law:**
+   - **On Containers (`elType: "container"`):** Bare keys (NO underscore): `margin`, `padding`, `z_index`, `css_classes`, `_element_id`, `animation`, `_title`.
+   - **On Widgets (`elType: "widget"`):** Underscore-prefixed keys: `_margin`, `_padding`, `_z_index`, `_css_classes`, `_element_id`, `_animation`, `_element_width`, `_element_custom_width`.
+   - *Violating this causes Elementor's CSS generator to silently store the key and drop the styling!*
+3. **Mandatory `isInner`, `elements: []` & Navigator `_title` Law:**
+   - Top-level section containers: `"isInner": false`, `"_title": "<Descriptive Section Label>"` (makes Elementor Navigator human-readable instead of 15 anonymous `"Container"` rows!).
+   - Nested child containers: `"isInner": true`.
+   - Every widget node MUST include `"isInner": false` and `"elements": []`.
+   - Strict JSON hygiene: NO comments (`/* */` / `//`), NO trailing commas, unique 7–8 char hex IDs, and HEX/RGBA color values only (never bare `"white"` or `"black"`).
+4. **Responsive Suffix Law:**
    - Desktop: `<control>` (e.g. `padding`, `width`, `flex_direction`, `typography_font_size`)
    - Tablet: `<control>_tablet`
-   - Mobile: `<control>_mobile` (e.g. `width_mobile`, `flex_direction_mobile`)
+   - Mobile: `<control>_mobile` (e.g. `width_mobile`, `flex_direction_mobile`, `typography_font_size_mobile`, `padding_mobile`)
+5. **Mandatory Enable-Flag Law (Zero Silent Drops):**
+   - Typography keys are ignored unless `<prefix>_typography: "custom"` is explicitly set.
+   - Background colors/images/gradients are ignored unless `background_background: "classic" | "gradient" | "video"` is set first (same for `background_overlay_background: "classic"`).
+   - Image CSS filters are ignored unless `css_filters_css_filter: "custom"` is set.
+   - **Overlay Opacity Quirk:** `background_overlay_opacity` requires `{"unit": "px", "size": 0.45}` (yes, `unit: "px"` for a `0–1` float!).
+
+---
+
+## 1.5. The 6 Silent Flexbox/Grid & Zero-Cascade Layout Traps (Battle-Tested!)
+
+> [!CAUTION]
+> Elementor silently stores invalid or conflicting layout keys with ZERO error message. Obey these 6 laws on every container and widget:
+
+1. **The `content_width: "boxed"` Flex-Child Collapse Trap:** Child containers inside a horizontal flex row (`flex_direction: "row"`) default to `content_width: "boxed"` (`e-con-boxed`), which forces `width: 100%` and collapses multi-column card grids into vertical stacks! **Fix:** Every flex child container with an explicit width (`48.5%`, `31.5%`, `340px`) MUST set **`content_width: "full"`** (the outer row wrapper may stay `"boxed"`).
+2. **The Column Default `flex_align_items: "center"` Trap:** A column container (`flex_direction: "column"`) without explicit `flex_align_items` gets `"center"` injected by Elementor — breaking right-aligned Persian headings/paragraphs inside cards! **Fix:** ALWAYS explicitly set **`flex_align_items: "stretch"`** on column containers unless you genuinely want centered content (like a centered CTA).
+3. **The `_flex_grow: "1"` Sibling-Collapse Trap:** When a horizontal row places a growing text column next to a fixed-width avatar/badge/icon, setting `_flex_grow: "1"` alone shrinks the badge to `0px`! **Fix:** Pair BOTH sides explicitly — growing column gets `_flex_size: "grow"` + `_flex_grow: "1"`, fixed sibling gets **`_flex_size: "none"`**.
+4. **The `flex_gap` vs `gap` Silent-Drop Trap:** Elementor's CSS generator reads ONLY **`flex_gap`** (`--gap`/`--row-gap`), NEVER `gap`.
+5. **The Grid Dual-Axis Object Trap:** On `container_type: "grid"`, ALWAYS pass BOTH `grid_columns_grid` (CSS string: `"repeat(3, 1fr)"`) AND **`grid_rows_grid` as an object** (`{"unit": "fr", "size": 1, "sizes": []}`). Passing a string or omitting `grid_rows_grid` makes Elementor render a phantom empty 2nd row!
+6. **Zero-Cascade, Kit `20px` Widget Spacing & Inline Button Traps:**
+   - **Zero Cascade:** Elementor widgets do NOT inherit CSS typography/color cleanly from parent containers — every `heading`, `text-editor`, and `button` MUST bind `__globals__` OR explicitly declare `typography_typography: "custom"`, font family, size, weight, line-height (`1.75–1.9` for Persian body), and color (otherwise ugly Kit `#6EC1E4` / `#7A7A7A` / `1.2` defaults leak in!).
+   - **Kit `20px` Default Gap:** Elementor adds ~20px spacing between stacked widgets via `--widgets-spacing`; control vertical rhythm with container `flex_gap` instead of spacer widgets, and deploy the Kit trailing-`<p>` reset (`Extension 06`).
+   - **Side-by-Side Buttons:** Set `_element_width: "auto"` + explicit `typography_line_height` on each button so two buttons sit inline instead of stacking full-width at `line-height: 1`.
+   - **Persian RTL Locale (`fa_IR`) Guard:** When WordPress `WPLANG` is `fa_IR`, Elementor natively flips flex row start/end right-to-left — NEVER blindly add `row-reverse` on RTL sites without checking live render first!
 
 ---
 

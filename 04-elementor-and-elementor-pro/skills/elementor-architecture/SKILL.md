@@ -84,4 +84,5 @@ description: >-
 ### ابزارهای خط فرمان (Scripts)
 - **`scripts/inspect_widget.py`:** استخراج مستقیم کنترل‌های هر ویجت از سورس‌کد واقعی Elementor v4.2.3 و Elementor Pro v4.3.2.
 - **`extensions/05-acf-woocommerce-and-validation.md`:** ادغام بومی ACF Dynamic Tags (`__dynamic__`) و WooCommerce HPOS، محدودیت‌های تاییدشده سورس + پروتکل استثنا، چک‌لیست ۵مرحله‌ای QA و بویلرپلیت‌های PHP در `references/sample-php/`.
-- **`scripts/article_to_elementor.py`:** کامپایلر Brand-Agnostic برای تولید `_elementor_data` منطبق با ۷ گناه کبیره (بدون H1 تکراری، CTA تک‌ستونه، احترام به ZWNJ هر برند).
+- **`extensions/06-visual-qa-kit-safety-and-render-debug.md`:** ایمنی Global Kit و بازیابی Revision، CSS دفاعی کیت (حذف حاشیه `<p>` آخر و فوکوس WCAG)، عیب‌یابی DOM با `eval` روی `.e-con-inner`، تریاژ ۴سطحی رندر خراب و Element Cache TTL، و گاردهای `WP_MEMORY_LIMIT` و RTL (`fa_IR`).
+- **`scripts/article_to_elementor.py`:** کامپایلر Brand-Agnostic نسخه ۲ (غیر اتمیک) برای تولید `_elementor_data` منطبق با ۷ گناه کبیره + ایمن در برابر تله‌های Flexbox (`content_width: full`، `flex_align_items: stretch`، `_title` در Navigator) + الگوهای لوکس (تایم‌لاین RTL، Pill Badge، کارت متخصص E-E-A-T، کارت‌های Decomposed) و متد خودآزمای `validate()`.
