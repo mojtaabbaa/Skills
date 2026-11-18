@@ -33,7 +33,7 @@ def check_skill(skill_dir: Path):
 def main():
     print(f"Validating Categorized Skills Repository at: {REPO_ROOT}\n")
     
-    categories = sorted([d for d in REPO_ROOT.iterdir() if d.is_dir() and d.name.startswith(('01-', '02-', '03-', '04-', '05-', '06-'))])
+    categories = sorted([d for d in REPO_ROOT.iterdir() if d.is_dir() and d.name.startswith(('01-', '02-', '03-', '04-', '05-', '06-', '07-', '08-'))])
     
     total_skills = 0
     passed_skills = 0
